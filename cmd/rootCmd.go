@@ -9,12 +9,7 @@ import (
 )
 
 func init() {
-	cobra.OnInitialize(initConfig)
-	exp := viper.GetBool("experimental")
-	fmt.Println("init() experimental:", exp)
-	if exp {
-		addExperimentalCommands()
-	}
+	cobra.OnInitialize(initConfig, addExperimentalCommands)
 }
 
 var rootCmd = &cobra.Command{
