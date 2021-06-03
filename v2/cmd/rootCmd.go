@@ -10,7 +10,9 @@ import (
 
 func init() {
 	initConfig()
-	addExperimentalCommands()
+	if viper.GetBool("experimental") {
+		addExperimentalCommands()
+	}
 }
 
 var rootCmd = &cobra.Command{

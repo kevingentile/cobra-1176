@@ -10,6 +10,6 @@ var testCmd = &cobra.Command{
 	Use:   "test",
 	Short: "experimental test command",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("test command")
+		fmt.Println("EXECUTED EXPERIMENTAL COMMAND")
 	},
 }
